@@ -82,3 +82,14 @@ function howMuchTimeFromDate(days, hours, minutes, seconds) {
 
 console.log(howMuchTimeFromDate(26, 09, 30, 00));
 
+const daysDomElement = document.querySelector('.days-counter');
+console.log(daysDomElement);
+
+const hoursDomElement = document.querySelector('.hours-counter');
+console.log(hoursDomElement);
+
+const minutessDomElement = document.querySelector('.minutes-counter');
+console.log(daysDomElement);
+
+const secondsDomElement = document.querySelector('.seconds-counter');
+console.log(secondsDomElement);
