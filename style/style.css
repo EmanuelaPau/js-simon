@@ -7,7 +7,7 @@ main {
 .my_container {
     background-color: #e6e6fa;
     width: 55%;
-    height: 45%;
+    /* height: 45%; */
     color: #008080;
     padding: 50px;
 }
