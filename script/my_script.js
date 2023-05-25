@@ -5,24 +5,24 @@ console.log('hello');
  * @returns the users current hour, minutes and seconds
  */
 
-function getUserDateAndTime() {
-    // I get the date
-    const today = new Date();
-    // I get the days
-    const userDays = today.getDay();
-    // I get the hours
-    const userHours = today.getHours();
-    // I get the minutes
-    const userMinutes = today.getMinutes();
-    // I get the seconds
-    const userSeconds = today.getSeconds();
+// function getUserDateAndTime() {
+//     // I get the date
+//     const today = new Date();
+//     // I get the days
+//     const userDays = today.getDay();
+//     // I get the hours
+//     const userHours = today.getHours();
+//     // I get the minutes
+//     const userMinutes = today.getMinutes();
+//     // I get the seconds
+//     const userSeconds = today.getSeconds();
 
-    // Create an array with hours, minutes and seconds.
-    const userDateList = [userDays, userHours, userMinutes, userSeconds];
-    console.log(userDateList);
+//     // Create an array with hours, minutes and seconds.
+//     const userDateList = [userDays, userHours, userMinutes, userSeconds];
+//     console.log(userDateList);
 
-    return userDateList;
-}
+//     return userDateList;
+// }
 
 // getUserDateAndTime();
 
@@ -32,7 +32,7 @@ function howMuchTimeFromDate(days, hours, minutes, seconds) {
     // I get the date
     const today = new Date();
     // I get the days
-    const userDays = today.getDay();
+    const userDays = today.getDate();
     // I get the hours
     const userHours = today.getHours();
     // I get the minutes
