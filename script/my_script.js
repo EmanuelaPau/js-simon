@@ -1,32 +1,7 @@
 console.log('hello');
 
-/**
- * A function that gets the users current hour, minutes and seconds.
- * @returns the users current hour, minutes and seconds
- */
-
-// function getUserDateAndTime() {
-//     // I get the date
-//     const today = new Date();
-//     // I get the days
-//     const userDays = today.getDay();
-//     // I get the hours
-//     const userHours = today.getHours();
-//     // I get the minutes
-//     const userMinutes = today.getMinutes();
-//     // I get the seconds
-//     const userSeconds = today.getSeconds();
-
-//     // Create an array with hours, minutes and seconds.
-//     const userDateList = [userDays, userHours, userMinutes, userSeconds];
-//     console.log(userDateList);
-
-//     return userDateList;
-// }
-
-// getUserDateAndTime();
-
 // creo una funzione che mi dice quanto tempo manca da una data 
+
 
 function howMuchTimeFromDate(days, hours, minutes, seconds) {
     // I get the date
@@ -82,14 +57,40 @@ function howMuchTimeFromDate(days, hours, minutes, seconds) {
 
 console.log(howMuchTimeFromDate(26, 09, 30, 00));
 
+// Days h1 
 const daysDomElement = document.querySelector('.days-counter');
 console.log(daysDomElement);
-
+// Hours h1 
 const hoursDomElement = document.querySelector('.hours-counter');
 console.log(hoursDomElement);
-
+// minutes h1
 const minutessDomElement = document.querySelector('.minutes-counter');
 console.log(daysDomElement);
-
+// seconds h1
 const secondsDomElement = document.querySelector('.seconds-counter');
 console.log(secondsDomElement);
+
+
+const clock = setInterval(timePassingToAddToPage, 1000, daysDomElement, hoursDomElement, minutessDomElement, secondsDomElement);
+
+function timePassingToAddToPage(daysHtml, hoursHtml, minutesHtml, secondsHtml) {
+
+    // Get time left 
+    let timeLeftToAddToClock = (howMuchTimeFromDate(26, 09, 30, 00));
+
+    // Add seconds to page 
+    let secondsLeftToAddToClock = timeLeftToAddToClock[3];
+    secondsHtml.innerHTML = secondsLeftToAddToClock;
+
+    // Add minutes to page 
+    let minutesLeftToAddToClock = timeLeftToAddToClock[2];
+    minutesHtml.innerHTML = minutesLeftToAddToClock;
+
+    // Add hours to page 
+    let hoursLeftToAddToClock = timeLeftToAddToClock[1];
+    hoursHtml.innerHTML = hoursLeftToAddToClock;
+
+    // Add days to page 
+    let daysLeftToAddToClock = timeLeftToAddToClock[0];
+    daysHtml.innerHTML = daysLeftToAddToClock;
+}
