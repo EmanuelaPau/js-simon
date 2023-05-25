@@ -80,4 +80,5 @@ function howMuchTimeFromDate(days, hours, minutes, seconds) {
 
 }
 
-console.log(howMuchTimeFromDate(25, 16, 10, 00));
+console.log(howMuchTimeFromDate(26, 09, 30, 00));
+
