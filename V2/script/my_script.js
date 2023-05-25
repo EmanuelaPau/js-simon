@@ -73,5 +73,11 @@ function timePassingToAddToPage() {
     secondsDomElement.innerHTML = countdownSeconds;
 
     newHowMuchMsAreLeftFromDate = newHowMuchMsAreLeftFromDate - 1000;
+
+    console.log(newHowMuchMsAreLeftFromDate);
+
+    if (newHowMuchMsAreLeftFromDate <= 0) {
+        clearInterval(clock);
+    }
 }
 
